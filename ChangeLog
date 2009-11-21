@@ -11,6 +11,10 @@ in the release notes.
 All committers are allowed to commit to this file.
 
 ----------------------------------------------------------------------
+yrchen@20091122:
+    程式碼搬到 GitHub 上面管理，版本控制系統也改用 Git 來處理
+    Public Clone URL: git://github.com/yrchen/OPMS.git
+
 yrchen@20061224:
     稍微解釋一下程式的架構：
 
