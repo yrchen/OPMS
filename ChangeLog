@@ -1,0 +1,47 @@
+Updating Information for OPMS (Open Project Management System) project
+
+This file is maintained by Chen YuRen <yrchen@ATCity.org> and
+copyrighted by the OrangeStudio Inc. <http://OrangeStudio.org>
+
+This file contains major changes to source and the infrastructure.
+Intended audience are core committers, maintainers and other
+developers. User oriented changes should be submitted for inclusion
+in the release notes.
+
+All committers are allowed to commit to this file.
+
+----------------------------------------------------------------------
+yrchen@20061224:
+    稍微解釋一下程式的架構：
+
+    include/class-*.php
+      是放置 Model 跟 Controller (Model 跟 Controller)
+    include/class-event-*.php
+      是放置 Event Handler (View)
+    include/function-*.php
+      是放置所有層都有可能會用到的 function
+    lib/class/template/smarty-local/plugins/*.php:
+      是 View 層會用到的 Smarty plugin
+
+    所有功能的基礎都是從 main.php 呼叫 opms_start() 開始，此程式會呼叫
+class Dispatcher 根據你透過 GET 傳過來的 event request 來產生一個新的
+event handler，event handler 內部跑完一些邏輯控制以後透過 class Page
+產生畫面並編譯樣版，最後將執行結果或是可能的錯誤顯示出來
+
+yrchen@20061218:
+    現在程式的基本架構大致上差不多了，所有檢查機制或是訊息傳遞，都是利
+用例外事件來處理，同一層裏面可以傳輸出不同的例外事件，但是優先的事件會
+先處理，所以不會有兩件例外事件同時送出
+
+    資料庫的寫入是依靠 Model 層控制，Controller 層在送指令給資料庫時會
+重複作權限檢查，事實上在 event handler 就有做這樣的控制，不過因為程式
+是公開的，任何人都可以幫他加上新的 event handler，其他程式並不能確保一
+定有考慮到權限的問題，所以資料庫資料在更新前還是會再做權限檢查，所以在
+View 層要有辦法接收權限檢查所丟出的例外事件，不然會到 Controller 層才
+會被捕捉
+
+    當然，目前仍有一部分的 code 還沒加上這樣的機制，所以還需要再修改
+
+yrchen@20061207:
+    第一次寫版本資訊，基本上這個時候是個完全不成熟的程式，所以這個版本
+資訊只是寫爽的 :p
