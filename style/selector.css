@@ -1,0 +1,36 @@
+.container {
+        width: 700px;
+        padding: 15px;
+        margin: 3px 0px 0px 0px;
+        background: #fff;
+}
+
+/* pyramid */
+
+#navPyra {
+        margin: 0;
+        padding: 2px 5px 0px 0px;
+/*        border-bottom: 1px solid #9FB1BC;*/
+}
+
+#navPyra li {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        list-style-type: none;
+}
+
+#navPyra a:link, #navPyra a:visited {
+        float: left;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: bold;
+        padding: 0 12px 6px 12px;
+        text-decoration: none;
+        color: #708491;
+}
+
+#navPyra a:link.active, #navPyra a:visited.active, #navPyra a:hover {
+        color: #000;
+        background: url(../images/Rounded.gif) no-repeat bottom center;
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.4.10">
+ <name>Log</name>
+ <summary>Logging utilities</summary>
+ <description>The Log framework provides an abstracted logging system. It supports logging to console, file, syslog, SQL, Sqlite, mail, and mcal targets. It also provides a subject - observer mechanism.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>jon</user>
+   <name>Jon Parise</name>
+   <email>jon@php.net</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>1.9.8</version>
+  <date>2006-07-31</date>
+  <license>PHP License</license>
+  <state>stable</state>
+  <notes>The window handler now allows the entire CSS style to be set instead of just the text color.
+  </notes>
+  <deps>
+   <dep type="php" rel="ge" version="4.3.0" optional="no"/>
+   <dep type="pkg" rel="ge" version="1.3" optional="yes">DB</dep>
+   <dep type="pkg" rel="ge" version="2.0.0RC1" optional="yes">MDB2</dep>
+   <dep type="ext" rel="has" optional="yes">sqlite</dep>
+  </deps>
+  <filelist>
+   <file role="doc" baseinstalldir="/" name="docs/examples/composite.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/console.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/display.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/error_log.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/file.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/mail.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/null.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/observer_mail.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/pear_error_handler.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/php_error_handler.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/sql.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/sqlite.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/syslog.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/examples/win.php"/>
+   <file role="doc" baseinstalldir="/" name="docs/guide.txt"/>
+   <file role="php" baseinstalldir="/" name="Log/composite.php"/>
+   <file role="php" baseinstalldir="/" name="Log/console.php"/>
+   <file role="php" baseinstalldir="/" name="Log/daemon.php"/>
+   <file role="php" baseinstalldir="/" name="Log/display.php"/>
+   <file role="php" baseinstalldir="/" name="Log/error_log.php"/>
+   <file role="php" baseinstalldir="/" name="Log/file.php"/>
+   <file role="php" baseinstalldir="/" name="Log/mail.php"/>
+   <file role="php" baseinstalldir="/" name="Log/mcal.php"/>
+   <file role="php" baseinstalldir="/" name="Log/mdb2.php"/>
+   <file role="php" baseinstalldir="/" name="Log/null.php"/>
+   <file role="php" baseinstalldir="/" name="Log/observer.php"/>
+   <file role="php" baseinstalldir="/" name="Log/sql.php"/>
+   <file role="php" baseinstalldir="/" name="Log/sqlite.php"/>
+   <file role="php" baseinstalldir="/" name="Log/syslog.php"/>
+   <file role="php" baseinstalldir="/" name="Log/win.php"/>
+   <file role="data" baseinstalldir="/" name="misc/log.sql"/>
+   <file role="test" baseinstalldir="/" name="tests/composite.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/console.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/display.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/error_log.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/extract.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/extract2.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/factory.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/file.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/levels.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/null.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/priority.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/singleton.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/sqlite.phpt"/>
+   <file role="test" baseinstalldir="/" name="tests/sql_ident.phpt"/>
+   <file role="php" baseinstalldir="/" name="Log.php"/>
+  </filelist>
+ </release>
+ <changelog>
+   <release>
+    <version>1.9.8</version>
+    <date>2006-07-25</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>The window handler now allows the entire CSS style to be set instead of just the text color.
+    </notes>
+   </release>
+   <release>
+    <version>1.9.7</version>
+    <date>2006-07-07</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>Provided documentation on logging PHP assertions and exceptions.
+All stock handlers now provide stubbed open() and close() method.
+The composite handler now tracks the success of its child handlers&apos; operations.
+The composite handler&apos;s log() method now opens its child handlers if they&apos;re not already open.
+    </notes>
+   </release>
+   <release>
+    <version>1.9.6</version>
+    <date>2006-07-07</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>_getBacktraceVars() now works with composite handlers. (Bug 7602)
+Instances of strftime(&apos;%T&apos;) have been replaced with &apos;%H:%M:%S&apos;. (Bug 7629)
+Provided documentation on logging PHP assertions and exceptions.
+    </notes>
+   </release>
+   <release>
+    <version>1.9.5</version>
+    <date>2006-04-30</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>Correcting the sqlite dependency.  It is now optional. (Bug 7523)
+    </notes>
+   </release>
+   <release>
+    <version>1.9.4</version>
+    <date>2006-04-24</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>If a &apos;DB&apos; class already exists, the SQL handler won&apos;t attempt to require DB.php. (Bug 6214)
+When creating the Log instance in factory(), return a proper reference to the object. (Bug 5261)
+When preparing the MDB2 statement, mark it as MDB2_PREPARE_MANIP. (Bug 6323)
+If the desired Log class already exists (because the caller has supplied it from some custom location), simply instantiate and return a new instance. (Mads Danquah)
+The observer&apos;s factory method now provides more robust file location logic. (Bug 6831)
+Added MIN() and MAX() functions for calculating the minimum and maximum log masks based on a given priority.  MAX() superceeds the existing UPTO() function, which is now deprecated.
+Settled on the PHP4-style &quot;return object by reference&quot; notation for good, even though it results in a E_STRICT warning under PHP5. (Bug 6689)
+    </notes>
+   </release>
+   <release>
+    <version>1.9.3</version>
+    <date>2005-12-04</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>The Observer code is now PHP 4.4 compliant. (Bug 5776)
+Log::factory(), Log::singleton(), and Log_observer::factory() now return null instead of false on failure.  This is more consistent with the model that these methods return object references.  Backwards compatibility is only violated if users were explicitly testing for a literal &apos;false&apos; result.
+    </notes>
+   </release>
+ </changelog>
+</package>

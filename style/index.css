@@ -1,0 +1,929 @@
+/*****************************************************/
+/*   Design:  GoFlexible-2                           */
+/*---------------------------------------------------*/
+/*   Author:  Gerhard Erbes                          */
+/*            gw@actamail.com                        */
+/*---------------------------------------------------*/
+/*   Version: 4.1                                    */
+/*   Date:   12.19 2006                         */
+/*****************************************************/
+
+/*****************/
+/*   MAIN BODY   */
+/*****************/
+body {
+	font-size: 62.5%;
+	margin: 0em auto;
+	padding: 0em;
+	background: url(../img/img_background.gif) top center repeat-y;
+  	font-family: Verdana,Tahoma,Arial,sans-serif;
+}
+
+#wrap {
+	width: 78.0em;
+	margin: 0em auto;
+	padding: 0em;
+	background-color: rgb(255,255,255);
+	border-left: solid 1px rgb(150,150,150);
+	border-right: solid 1px rgb(150,150,150);	
+}
+
+/*** Correction for non-IE browsers ***/
+#wrap {
+	overflow: hidden;
+}
+
+/*** Correction for IE 5.01 ***/
+#wrap {
+/*	float: left; */
+	float: none;
+}
+
+/*** Correction for Safari 1.x ***/
+* > #footer, * > form, * > #notes, * > .output {
+	position: relative;
+	z-index: 1000;
+}
+
+/**************/
+/*   HEADER   */
+/**************/
+
+/*** Header main banner ***/
+#header-banner {
+	width: 78.0em;
+	height: 11.4em;;
+	float: left;
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 0em 0em;
+	background: url(../images/indexlogo.jpg) no-repeat;
+}
+
+/*** Header navigation top ***/
+#header-nav-top {
+	float: right;
+	margin: 0.7em 0.2em 0em 0em;
+	padding: 0em;
+}
+
+ #header-nav-top ul {	
+	margin: 0em;
+	padding: 0em;
+	list-style: none;
+}	
+
+#header-nav-top li {
+	float: left;
+	white-space: nowrap;
+	border-left: solid 0.1em rgb(150,150,150);
+}
+
+#header-nav-top li a {
+	display: block; 
+	margin: 0em;
+	padding: 0em 0.5em 0em 0.5em;
+	background-color: rgb(255,255,255);
+	color: rgb(150,150,150);
+	text-decoration: none;
+	font-size: 1.8em;
+}
+
+#header-nav-top a:hover, #header-nav-top .selected {
+	background-color: inherit;
+	color: rgb(0,0,0);
+	text-decoration: underline;	
+}
+
+#header-nav-top .img-flag {
+	height: 1.2em;
+	display: inline;
+	margin: 0em;
+	padding: 0em;	
+	border: none;
+}
+
+/*** Header navigation bottom ***/
+#header-nav-bottom {
+	float: left;
+	width: 78.0em;
+	height: 2.0em;
+	margin: 0em;
+	padding: 0em;
+	border-top: solid 0px rgb(69,136,176);		
+	border-bottom: solid 0px rgb(69,136,176);			
+	line-height: 2.0em;
+	background: url(../img/img_header_nav_bottom.jpg);
+}
+
+#header-nav-bottom ul {	
+	margin: 0em;
+	padding: 0em;
+	list-style: none;
+	font-weight: bold;
+	font-size: 1.5em;	
+}	
+
+#header-nav-bottom li {
+	float: left;
+	white-space: nowrap;
+}
+
+#header-nav-bottom li a {
+	display: block;
+	margin: 0em;
+	padding: 0em 1.0em 0em 1.0em;
+	border-right: solid 1px rgb(255,255,255);	
+	background-color: inherit;
+	color: rgb(255,255,255);
+	text-decoration: none;
+}
+
+#header-nav-bottom a:hover, #header-nav-bottom a.selected {
+	margin: 0em;
+	padding: 0em 1.0em 0em 1.0em;
+	border-right: solid 1px rgb(255,255,255);	
+	background-color: inherit;
+	color: rgb(100,100,100);
+	text-decoration: none;
+}
+
+/*** Correction for IE5 ***/
+* html #header-nav-bottom a {width:1%;}
+
+/*** Correction for IE5 ***/
+* html #header-nav-bottom a {width:1%;}
+
+
+/***   Buffer between heading and content area   ***/
+#buffer {
+	clear: both; 
+	float: left;
+	width: 78.0em;
+	height: 2.0em;
+	margin: 0em;
+	padding: 0em;
+	background-color: inherit;
+}
+
+/***********************/
+/***   LEFT COLUMN   ***/
+/***********************/
+#left-column-first {
+	clear:both;
+	float: left;
+	width: 15.9em;
+	margin: 0em;
+	padding: 0em;
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+}
+
+/* Start Mac IE5 filter \*/
+#left-column-first {
+	padding-bottom: 30000px;
+	margin-bottom: -30000px;
+}
+
+/* End Mac IE5 filter */
+
+#left-column {
+	clear:both;
+	float: left;
+	width: 15.9em;
+	padding: 0em;
+	border-right: solid 0.1em rgb(200,200,200);		
+	background-color: rgb(242,242,242);
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+}
+
+/* Start Mac IE5 filter \*/
+#left-column {
+	padding-bottom: 30000px;
+	margin-bottom: -30000px;
+}
+/* End Mac IE5 filter */
+
+#left-column ul {	
+	width: 15.8em;
+	float: left;
+	list-style: none;
+	margin: 0em;
+	padding: 0em;	
+	border-bottom: solid 0.1em rgb(200,200,200);
+}	
+
+#left-column li {
+	margin: 0em;
+	padding: 0em;
+}
+
+#left-column li.left-nav-title {
+	display: block;
+	text-align: right;	
+	margin: 0em;
+	padding: 0.3em 0.7em 0.9em 0.6em;
+	background-color: inherit;
+	color: rgb(50,50,50);
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 1.3em;
+	font-size: 1.5em;
+}
+
+#left-column li a {
+	display: block;
+	text-align: right;	
+	padding: 0.3em 0.7em 0.2em 0.6em;
+	border-top: solid 0em rgb(215,215,215);
+	border-left: solid 0.5em rgb(255,255,255);		
+	background-color: inherit;
+	color: rgb(125,125,125);
+	text-decoration: none;
+	height: 1.3em;
+	font-size: 1.5em;
+}
+
+#left-column li.left-nav-group a {
+	display: block;
+	text-align: right;	
+	padding: 0.3em 0.7em 0.2em 0.6em;
+	border-top: solid 0.1em rgb(215,215,215);
+	border-left: solid 0.5em rgb(255,255,255);		
+	background-color: inherit;
+	color: rgb(125,125,125);
+	text-decoration: none;
+	font-weight: bold;
+	height: 1.3em;
+	font-size: 1.5em;
+}	
+	
+#left-column a:hover, #left-column .selected {
+	text-align: right;
+	border-left: solid 0.5em rgb(137,199,44);				
+	background-color: inherit;	
+	background-color: rgb(224,244,181);	
+	color: rgb(0,0,0);
+	text-decoration: none;
+}
+
+#left-column li.left-nav-group a:hover, #left-column li.left-nav-group .selected {
+	text-align: right;
+	border-left: solid 0.5em rgb(137,199,44);		
+	background-color: rgb(224,244,181);
+	color: rgb(0,0,0);
+	text-decoration: none;
+}
+
+/*** Images ***/
+#left-column-first .img-left-nav {
+	height: 50.0em;
+	width: 15.9em;
+	margin: 0em;
+	padding: 0em;
+	border: none;
+}
+
+/*************************/
+/***   MIDDLE COLUMN   ***/
+/*************************/
+#middle-column {
+	float: left;
+	width: 43.0em;
+	margin: 0em;
+	padding: 0em 2.0em 0em 2.0em;
+	background-color: inherit;
+	color: rgb(100,100,100);
+}
+
+/* Start Mac IE5 filter \*/
+#middle-column {
+	padding-bottom: 30000px;
+	margin-bottom: -30000px;
+}
+/* End Mac IE5 filter */	
+
+/***   Pagetitle   ***/
+#pagetitle {
+/*	float: left; */
+	width: 39.0em;
+	margin: 0.3em 0em 1.0em 0em;
+	padding: 0em;
+	background-color: inherit;
+	color: rgb(100,100,100);
+}
+
+#pagetitle p {
+	padding: 0em;
+	margin: 0em;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+/*** Standard title and box option ***/
+.middle-column-title-standard {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0em;	
+	border-bottom: solid 0.167em rgb(120,176,39);	
+	background-color: rgb(255,255,255);
+	color: rgb(112,162,36);
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.middle-column-box-full-standard {
+	float: left;
+	width: 43.0em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-left-standard {
+	clear: left;
+	float: left;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-right-standard {
+	float: right;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-full-standard p.heading, .middle-column-box-left-standard p.heading, .middle-column-box-right-standard p.heading {
+	margin: 1.0em 0em 1.0em 0em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-standard p.subheading, .middle-column-box-left-standard p.subheading, .middle-column-box-right-standard p.subheading {
+	margin: 1.0em 0em 0.6em 0em;	
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-standard p, .middle-column-box-left-standard p, .middle-column-box-right-standard p {
+	margin: 0em 0em 0.6em 0em;	
+	font-size: 1.2em;	
+}
+
+/*** Grey options ***/
+.middle-column-title-grey {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.3em;
+	background-color: rgb(220,220,220);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-grey {
+	float: left;
+	width: 43.0em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(235,235,235);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-left-grey {
+	clear: left;
+	float: left;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(235,235,235);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-right-grey {
+	float: right;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(235,235,235);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-full-grey p.heading, .middle-column-box-left-grey p.heading, .middle-column-box-right-grey p.heading {
+	margin: 1.0em 1.0em 1.0em 1.0em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-grey p.subheading, .middle-column-box-left-grey p.subheading, .middle-column-box-right-grey p.subheading {
+	margin: 1.0em 1.0em 0.6em 1.0em;	
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-grey p, .middle-column-box-left-grey p, .middle-column-box-right-grey p {
+	margin: 0em 1.0em 0.6em 1.0em;	
+	font-size: 1.2em;	
+}
+
+/*** Blue options ***/
+.middle-column-title-blue {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.3em;
+	background-color: rgb(187,211,247);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-blue {
+	float: left;
+	width: 43.0em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(226,238,252);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-left-blue {
+	clear: left;
+	float: left;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(226,238,252);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-right-blue {
+	float: right;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(226,238,252);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-full-blue p.heading, .middle-column-box-left-blue p.heading, .middle-column-box-right-blue p.heading {
+	margin: 1.0em 1.0em 1.0em 1.0em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-blue p.subheading, .middle-column-box-left-blue p.subheading, .middle-column-box-right-blue p.subheading {
+	margin: 1.0em 1.0em 0.6em 1.0em;	
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-blue p, .middle-column-box-left-blue p, .middle-column-box-right-blue p {
+	margin: 0em 1.0em 0.6em 1.0em;	
+	font-size: 1.2em;	
+}
+
+/*** Yellow options ***/
+.middle-column-title-yellow {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.3em;
+	background-color: rgb(255,236,128);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-yellow {
+	float: left;
+	width: 43.0em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,240,170);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-left-yellow {
+	clear: left;
+	float: left;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,240,170);
+	color: rgb(100,100,100);
+}
+
+.middle-column-box-right-yellow {
+	float: right;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,240,170);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-full-yellow p.heading, .middle-column-box-left-yellow p.heading, .middle-column-box-right-yellow p.heading {
+	margin: 1.0em 1.0em 1.0em 1.0em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-yellow p.subheading, .middle-column-box-left-yellow p.subheading, .middle-column-box-right-yellow p.subheading {
+	margin: 1.0em 1.0em 0.6em 1.0em;	
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-yellow p, .middle-column-box-left-yellow p, .middle-column-box-right-yellow p {
+	margin: 0em 1.0em 0.6em 1.0em;
+	font-size: 1.2em;	
+}
+
+/*** Green options ***/
+.middle-column-title-green {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.3em;
+	background-color: rgb(196,221,108);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-green {
+	float: left;
+	width: 43.0em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(224,244,181);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-left-green {
+	clear: left;
+	float: left;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(224,244,181);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-right-green {
+	float: right;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(224,244,181);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-full-green p.heading, .middle-column-box-left-green p.heading, .middle-column-box-right-green p.heading {
+	margin: 1.0em 1.0em 1.0em 1.0em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-green p.subheading, .middle-column-box-left-green p.subheading, .middle-column-box-right-green p.subheading {
+	margin: 1.0em 1.0em 0.6em 1.0em;	
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-green p, .middle-column-box-left-green p, .middle-column-box-right-green p {
+	margin: 0em 1.0em 0.6em 1.0em;
+	font-size: 1.2em;	
+}
+
+/*** Red options ***/
+.middle-column-title-red {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.3em;
+	background-color: rgb(255,176,176);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-red {
+	clear: left;
+	float: left;
+	width: 43.0em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,219,219);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-left-red {
+	float: left;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,219,219);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-right-red {
+	float: right;
+	width: 20.5em;
+	margin: 0em 0em 2.0em 0em;
+	padding: 0em;
+	background-color: rgb(255,219,219);
+	color: rgb(100,100,100);	
+}
+
+.middle-column-box-full-red p.heading, .middle-column-box-left-red p.heading, .middle-column-box-right-red p.heading {
+	margin: 1.0em 1.0em 1.0em 1.0em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-red p.subheading, .middle-column-box-left-red p.subheading, .middle-column-box-right-red p.subheading {
+	margin: 1.0em 1.0em 0.6em 1.0em;	
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.middle-column-box-full-red p, .middle-column-box-left-red p, .middle-column-box-right-red p {
+	margin: 0em 1.0em 0.6em 1.0em;
+	font-size: 1.2em;	
+}
+
+/*** Image with border ***/
+.middle-column-img-left-halfsize-border {
+	float: left;
+	width: 5.5em;
+	height: 5.5em;
+	margin: 0.3em 0.75em 0.3em 0em;
+	border: solid 1px rgb(100,100,100);
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.	
+}
+
+.middle-column-img-right-halfsize-border {
+	float: right;
+	width: 5.5em;
+	height: 5.5em;
+	margin: 0.3em 0em 0.3em 0.75em;
+	border: solid 1px rgb(100,100,100);	
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.	
+}
+
+.middle-column-img-left-fullsize-border {
+	float: left;
+	width: 11.0em;
+	height: 11.0em;
+	margin: 0.3em 0.75em 0.3em 0em;
+	border: solid 1px rgb(100,100,100);
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.	
+}
+
+.middle-column-img-right-fullsize-border {
+	float: right;
+	width: 11.0em;
+	height: 11.0em;
+	margin: 0.3em 0em 0.3em 0.75em;
+	border: solid 1px rgb(100,100,100);	
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.	
+}
+
+/*** Image without border ***/
+.middle-column-img-left-halfsize-noborder {
+	float: left;
+	width: 5.0em;
+	height: 5.0em;
+	margin: 0.3em 0.5em 0.3em 0em;
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.
+}
+
+.middle-column-img-right-halfsize-noborder {
+	float: right;
+	width: 5.0em;
+	height: 5.0em;
+	margin: 0.3em 0em 0.3em 0.5em;
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.
+}
+
+.middle-column-img-left-fullsize-noborder {
+	float: left;
+	width: 10.0em;
+	height: 10.0em;
+	margin: 0.3em 0.5em 0.3em 0em;
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.
+}
+
+.middle-column-img-right-fullsize-noborder {
+	float: right;
+	width: 10.0em;
+	height: 10.0em;
+	margin: 0.3em 0em 0.3em 0.5em;
+	font-size: 0.833em; !scaling units so that 1.0em=10px, thus more easy to scale pictures. This is necessary since active font-size is 1.2em in the middle section.
+}
+
+/************************/
+/***   RIGHT COLUMN   ***/
+/************************/
+#right-column {
+	float: right;
+	width: 23.0em;
+	margin: 0em 0em 0em 0em;
+	padding: 0em;
+}
+
+/* Start Mac IE5 filter \*/
+#right-column {
+	padding-bottom: 30000px;
+	margin-bottom: -30000px;
+}
+/* End Mac IE5 filter */	
+
+/*** Standard option ***/
+.right-column-title-standard {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0em;
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right-column-box-standard {
+/*	float: right; */
+	width: 20.0em;
+	margin: 0em 1.0em 0.8em 0em;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	border: solid 0.1em rgb(200,200,200);
+	background-color: rgb(255,255,255);
+	color: rgb(100,100,100);	
+}
+
+/*** Grey title and box option ***/
+.right-column-title-grey {
+/* clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.2em;
+	background-color: rgb(220,220,220);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right-column-box-grey {
+/*	float: right; */
+	width: 20.0em;
+	margin: 0em 1.0em 0.8em 0em;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	border: solid 0.1em rgb(200,200,200);
+	background-color: rgb(235,235,235);
+	color: rgb(100,100,100);	
+}
+
+/*** Blue title and box option ***/
+.right-column-title-blue {
+/*	clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.2em;
+	background-color: rgb(187,211,247);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right-column-box-blue {
+/*	float: right; */
+	width: 20.0em;
+	margin: 0em 1.0em 0.8em 0em;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	border: solid 0.1em rgb(200,200,200);
+	background-color: rgb(226,238,252);		
+	color: rgb(100,100,100);		
+}
+
+/*** Yellow title and box option ***/
+.right-column-title-yellow {
+/*	clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.2em;
+	background-color: rgb(255,236,128);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right-column-box-yellow {
+/*	float: right; */
+	width: 20.0em;
+	margin: 0em 1.0em 0.8em 0em;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	border: solid 0.1em rgb(200,200,200);
+	background-color: rgb(255,255,191);	
+	color: rgb(100,100,100);			
+}
+
+/*** Green title and box option ***/
+.right-column-title-green {
+/* 	clear: both;*/
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.2em;
+	background-color: rgb(196,221,108);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right-column-box-green {
+/*	float: right; */
+	width: 20.0em;
+	margin: 0em 1.0em 0.8em 0em;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	border: solid 0.1em rgb(200,200,200);
+	background-color: rgb(224,244,181);	
+	color: rgb(100,100,100);	
+}
+
+/*** Red title and box option ***/
+.right-column-title-red {
+/*	clear: both; */
+	display: block;
+	margin: 0em 0em 0.5em 0em;
+	padding: 0.2em 0em 0.2em 0.2em;
+	background-color: rgb(255,176,176);
+	color: rgb(100,100,100);
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.right-column-box-red {
+/*	float: right; */
+	width: 20.0em;
+	margin: 0em 1.0em 0.8em 0em;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	border: solid 0.1em rgb(200,200,200);
+	background-color: rgb(255,219,219);	
+	color: rgb(100,100,100);	
+}
+
+/*** Paragraph text ***/
+#right-column p {
+	margin: 0em 0em 0.4em 0em;
+	font-size: 1.1em;
+}
+
+/*****************/
+/***   FOOTER   **/
+/*****************/
+#footer {
+	clear: both;
+/*	float: left; */
+	width: 78.0em;
+	height: 2.5em;
+	margin: 1.0em 0em 0em 0.0em;
+	padding: 0.5em 0em 0.5em 0em;
+	border-top: solid 0.1em rgb(200,200,200);
+	border-bottom: solid 0.1em rgb(200,200,200);	
+	background-color: rgb(255,255,255);
+	text-align: center;
+	color: rgb(100,100,100);
+	font-size: 1.0em;
+}
+
+/*************************************************/
+/***   HYPERLINKS IN MIDDLE AND RIGHT COLUMNS  ***/
+/*************************************************/
+
+/*** Hyperlinks in middle and right columns ***/
+a {
+	background-color: inherit;
+	color: rgb(100,100,100);
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*** Visited links not in use ***/
+/*a:visited {
+	background-color: inherit;
+	color: rgb(100,100,100);
+	text-decoration: underline;
+} */

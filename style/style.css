@@ -1,0 +1,69 @@
+/*  
+Theme Name:h2
+Theme URI:http://wordpress.com/
+Version:1.6
+Author:Matt Mullenweg
+Author URI:http://wordpress.com/
+*/
+body{background:url(image/bg.gif) #f5f5f5 repeat-x;font-family:Georgia,"Times New Roman",Times,serif;margin:0 auto;padding:0;text-align:center}
+h1,.signup ul{margin:0;padding:0}
+h1{background:url(image/logo.jpg) no-repeat top center;width:867px;margin:0 auto}
+h1 a{display:block;height:133px;text-decoration:none;text-indent:-9000px;width:450px}
+h1,h2,h3{font-weight:normal}
+hr{display:none}
+p,.entrytext li{line-height:140%}
+.alignright{float:right}
+.info{float:left;font-size:16px;width:57%}
+.info li,.news li{margin-bottom:5px}
+.navigation{display:block;margin-bottom:60px;margin-top:10px;text-align:center}
+.news,.postmetadata{border-top:1px solid #ccc;margin-top:2em}
+.signup{border-left:1px solid #ccc;color:#1d307c;float:right;font-size:18px;width:37%}
+.signup .invite,#email{font-size:22px;text-align:center;width:100%}
+.signup form,.news{margin:0 1em}
+.signup li{margin-left:20px}
+.signup p{color:#000;font-size:14px;margin:2px 0}
+td #submit.submit{float:right;padding: .1em 0 ; width: 8em;}
+.submit input{font-size:24px}
+#blognav .block{float:left;margin-left:2em;width:11em}
+#blognav .first{margin-left:0}
+#blognav li{border-bottom:1px solid #eee;padding:7px 0}
+#blognav ul{list-style:none;margin:0;padding:0}
+.legal a,.legal{color:#999;font-size:13px;text-align:left}
+#automattic{float:right;display:block;margin-top:-2em}
+#comment{width:90%}
+#content,#footer{padding:1em 6em;text-align:left}
+#footer{background:url(image/main-bottom.gif) no-repeat bottom;clear:both;margin:0 auto;height:130px;text-align:center;font-size:13px}
+#footer *, #content{margin-left:49px;}
+#getit{background:#39f;border-left:1px solid #55a0d9;border-top:1px solid #55a0d9;color:#fff;display:block;margin:auto;padding:1em;width:150px}
+#getit:hover{background:#006}
+
+#header{background:url(image/main-header.gif) no-repeat bottom;clear:both;margin:0 auto;height:130px;text-align:center;font-size:13px}
+
+#hotblogs,.news ul{font-size:16px}
+#loginform{padding-bottom:1em}
+#loginform .submit{text-align:right}
+#loginform .submit input{font-size:18px}
+#loginform h3{margin-bottom:0;margin-top:2em}
+#menu{left:50%;list-style:none;margin:0;margin-left:100px;padding:0;position:absolute;top:70px}
+#menu a{color:#000;display:block;padding:4px 10px;text-decoration:none}
+#menu a:hover{background:#ccc}
+#menu li,.alignleft{float:left}
+#opendomain{font-size:9px}
+
+#page{background:url(image/main-back.gif) repeat-y center;margin:-5px auto 0;padding:0;width:821px}
+.important{padding:1px 6px;margin-top:5px;background:#c7cff5}
+
+#signup-welcome h3 { font-variant: small-caps; margin: 0;}
+#signup-welcome p { font-size: 40px; margin: 0;}
+#signup-welcome {
+	width: 80%;
+	margin: auto;
+}
+
+h3.view {
+	border-bottom: 2px solid #ccc;
+	border-top: 2px solid #ccc;
+	padding: .5em;
+	font-size: 40px;
+	text-align: center;
+}

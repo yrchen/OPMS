@@ -1,0 +1,645 @@
+/*
+Theme Name: Jack's Theme
+Theme URI: http://jackslocum.com/
+Description: Jack's Theme
+Version: 1.0
+Author: Jack Slocum
+*/
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+a {
+	color: #083772;
+	font: normal 9pt tahoma;
+	text-decoration: none;
+}
+a#nav-collapse{
+	clear: none;
+	display: block;
+	float: right;
+	padding: 2px;
+}
+a#nav-collapse:hover{
+	background: #c3daf9;
+	border: 1px solid #93b5e4;
+	padding: 1px;
+}
+a#nav-dock{
+	border-bottom: 1px solid #93b5e4;
+	border-left: 1px solid white;
+	border-right: none;
+	border-top: 1px solid white;
+	color: #083772;
+	display: block;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	width: 30px;
+}
+a#nav-dock img{
+	left: 8px;
+	position: relative;
+}
+a#nav-dock:hover{
+	background: #ddecfe;
+}
+a#nav-expand{
+	border-bottom: 1px solid #93b5e4;
+	border-left: 1px solid white;
+	border-right: none;
+	border-top: 1px solid white;
+	color: #083772;
+	display: block;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	width: 100%;
+}
+a#nav-expand:hover{
+	background: #ddecfe;
+}
+a:hover{
+	text-decoration: underline;
+}
+a.post-title{
+	color: #083772;
+	font-size: 12pt;
+	font-weight: bold;
+}
+body {
+	background-image: url(../../images/JackSlocum/gradient-bg.gif);
+	font: normal 9pt tahoma;
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+	padding:0px;
+	color:#222;
+}
+
+td {
+	font: normal 9pt tahoma;
+}
+.blog-header{
+	background-color: #1e4e8f;
+	background-image: url(../../images/JackSlocum/header-bar.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border-bottom: 1px solid #083772;
+	height: 50px;
+	left: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	z-index: 0;
+}
+.blog-header a{
+	color: white;
+	font: bold 11pt tahoma;
+}
+.blog-header table{
+	height: 45px;
+	width: 98%;
+}
+.blog-header table td{
+	vertical-align: bottom;
+	padding-bottom:3px;
+}
+.blog-desc {
+	color: #ddecfe;
+	font: normal 8pt tahoma;
+}
+.more-link {
+	display:inline;
+	white-space: nowrap;
+}
+.more-link a{
+   font-weight: normal !important;
+}
+.date-header{
+	color: gray;
+	font-size: 8pt;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+.date-header a{
+	font-size: 8pt;
+}
+.post{
+	padding: 10px;
+	margin-right:225px;
+}
+.comments-enabled {
+	padding-left:0px;
+	background-image:url('../../images/JackSlocum/comment-bar-bg.gif');
+	background-repeat:repeat-y;
+}
+.comments-enabled div.content{
+	padding-left:28px;
+	position:relative;
+	zoom:1;
+}
+.innerBlock{
+	margin-top:5px;border-top:1px solid #eeeeee;
+} 
+.comments-enabled .innerBlock div.content {
+ 	margin-left:0px;padding-left:0px !important;
+} 
+.innerBlock B{font:bold 12px tahoma,arial,helvetica;color:#083772;display:block;margin:4px 0px;}
+.comments-enabled .comment-mark{
+	background-image:url('../../images/JackSlocum/cmark.gif');
+	background-repeat: no-repeat;
+	position:absolute;
+	display:block;
+	left:0px;
+	top:0px;
+	width:25px;
+	height:17px;
+	cursor:pointer;
+}
+.comments-enabled .comment-mark .comment-mark-text {
+	font-size:8px;
+	font-weight:bold;
+	color:#3d360b;
+	padding-left:3px;
+	padding-top:3px;
+	display:block;
+	line-height:10px;
+}
+.post-body{
+	padding-bottom: 8px;
+	padding-top: 5px;
+	line-height: 18px;
+}
+.post-body p, .post-body div.content{
+	padding-bottom:7px;
+}
+#blogBody div.content-title{
+	padding-bottom:2px;
+}
+.post-body a{
+	font-weight: bold;
+}
+.post-footer {
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+.sidebar-block{
+	border-top: 1px solid #6593cf;
+	padding-bottom: 10px;
+}
+.sidebar-title{
+	background: #e1eeff;
+	border-bottom: 1px solid #81aae2;
+	border-top: 1px solid white;
+	color: #083772;
+	font: bold 8pt arial;
+	height: 19px;
+	padding: 2px;
+	padding-left: 4px;
+}
+
+h2.sidebar-title{
+	margin: 0px;
+}
+
+#blogBody{
+	height: 100%;
+	overflow: auto;
+	overflow-x:hidden;
+	position: absolute;
+	top: 55px;
+	width: 100%;
+}
+#innerBody {
+	background: white;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 0px;
+	margin-left:42px;
+	padding-right:15px;
+}
+#innerBody strong{
+	color: #083772;
+	font-weight: bold;
+	margin: 0px;
+	margin-bottom: 4px;
+	margin-top: 10px;
+	padding: 0px;
+}
+#navbar {
+	background-color: #c3daf9;
+	border: 1px solid #6593cf;
+	height: 100%;
+	left: 4px;
+	position: absolute;
+	top: 55px;
+	width: 32px;
+	z-index: 11;
+	visibility:hidden;
+}
+#sidebar {
+	border-left: 1px solid #6593cf;
+	border-right: 1px solid #6593cf;
+	background: white;
+	left: 4px;
+	position: absolute;
+	top: 55px;
+	height: 100%;
+	visibility: hidden;
+	width: 200px;
+	z-index: 10;
+}
+#sidebar-inner{
+	overflow: auto;
+	height: 100%;
+}
+#sidebar a{
+	color: #083772;
+	font-size: 8pt;
+}
+#sidebar dd, #sidebar p, #sidebar ul{
+	padding: 4px;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+#recently li, .archive-list li, #prev-posts li, #category-list li, #link li{
+	padding:2px;
+	padding-left:10px;
+	background-image:url(../../images/JackSlocum/bullet.gif);
+	background-position: -3px 6px;
+	background-repeat: no-repeat;
+	font-size:8pt;
+}
+#sidebar li{
+	display: block;
+	padding-top: 3px;
+}
+#splitter{
+	cursor: e-resize;
+	height: 100%;
+	left: 204px;
+	overflow: hidden;
+	position: absolute;
+	top: 45px;
+	visibility: hidden;
+	width: 4px;
+	z-index: 20;
+}
+.innerFrame {
+	width:100%;
+	height:100%;
+}
+#example{
+	width:90%;
+	height:90%;
+	position:absolute;
+	top:5%;
+	left:5%;
+	border:3px solid #6593cf;
+	z-index:10000;
+	background:white;
+}
+#exclose{
+	position:absolute;
+	top:0px;
+	right:0px;
+	cursor: pointer;
+}
+.extra-block{
+	float:right;
+	clear: right;
+	width:200px;
+	margin: 10px 10px 20px 20px;
+	background:white;
+}
+#page-views{
+	background-image:url(../../images/JackSlocum/views-bg.gif);
+	color:#083772;
+	font:normal 11px tahoma,verdana,helvetica;
+	padding:5px;
+}
+#page-views .loading-indicator{
+	font-weight:normal;
+}
+.extra{
+	border: 1px solid #c3daf9;
+	margin-bottom:15px;
+}
+.extra .bd{
+	font:normal 8pt;
+	padding:8px;
+}
+.extra li{
+	padding:2px;
+}
+.extra li.sep{
+	padding-bottom:5px;
+	border-bottom:1px solid #ddecfe;
+	margin-bottom:3px;
+}
+.extra .hd{
+	background-color: #ddecfe;
+	padding:3px;
+	color:#083772;
+	font-weight:bold;
+	font-size:8pt;
+	border-bottom: 1px solid #c3daf9;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+}
+.icon {
+	width:16px;
+	height:16px;
+}
+.comment-form {
+	margin-left:10px;
+	width:600px;
+	padding:20px;
+	padding-bottom:0px;
+}
+.comment-form dt{
+	padding:3px;
+	font-size:8pt;
+}
+.comment-input {
+	width:90%;
+	font-size:9pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.submit-comment{
+	padding:10px;
+	text-align: center;
+}
+.button{
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+	width:40px;
+	overflow:visible;
+}
+#diggit {width:165px;height:67px;visibility:hidden;position:absolute;left:200px;top:200px;z-index:10002;}
+#cursor-img {width:14px;height:23px;visibility:hidden;position:absolute;left:200px;top:200px;z-index:1000;}
+#resize-img {width:21px;height:9px;visibility:hidden;position:absolute;left:200px;top:200px;z-index:1000;}
+#click-img {width:7px;height:7px;visibility:hidden;position:absolute;left:200px;top:200px;z-index:1001;}
+
+.loading-indicator {
+	font-size:8pt;
+	background-image: url('../../images/JackSlocum/wait.gif');
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+}
+
+.list {list-style:inside square;margin-bottom:10px;}
+.list li{padding:2px;}
+
+.allowed-tags{
+	font-size:7pt;
+	font-family:tahoma;
+}
+
+blockquote, pre.highlighted {
+	background: #F8F8F8 /*url(img/stripes.png)*/;
+	border: 1px solid #e8e8e8;
+	border-left-width: 8px;
+	padding: 0.8em;
+	margin: 1em ;
+	margin-right: 0;
+}
+pre.highlighted {
+	font-size: 12px !important;
+	line-height:14px !important;
+	padding:5px;
+	margin-left:0;
+}
+pre.highlighted code {
+}
+
+.hl-default     { color: black; }
+.hl-code        { color: black; }
+.hl-brackets    { color: black; }
+.hl-comment     { color: #008000; }
+.hl-quotes      { color: #a31515; }
+.hl-string      { color: #a31515; }
+.hl-identifier  { color: black; }
+.hl-builtin     { color: darkblue; }
+.hl-reserved    { color: blue; }
+.hl-inlinedoc   { color: blue; }
+.hl-var         { color: black; }
+.hl-url         { color: blue; }
+.hl-special     { color: navy; }
+.hl-number      { color: darkgreen; }
+.hl-inlinetags  { color: blue; }
+/* End Comments */
+.dialog-proxy {
+	background-image: url('../../images/JackSlocum/gradient-bg.gif');
+	background-color:#FFF;
+	border:1px solid #6593cf;
+	z-index:10001;
+	overflow:hidden;
+	position:absolute;
+	left:0;top:0;
+}
+#comment-cn{
+	background-image: url('../../images/JackSlocum/gradient-bg.gif');
+	background-color:#FFF;
+	border:1px solid #6593cf;
+	z-index:10001;
+	width:600px;
+	height:400px;
+	overflow:hidden;
+	position:absolute;
+	left:300;top:0;
+}
+#comment-cn-rzproxy{
+	z-index:10002;
+}
+#comment-cn-hd {
+	background-image: url(../../images/JackSlocum/tb-bg.gif);
+	background-color:navy;
+	background-position: -4px -4px;
+	color:#FFF;
+	font-size:100%;
+	line-height:100%;
+	border-bottom:1px solid #6593cf;
+	font:bold 11px arial, tahoma, verdana, helvetica;
+	overflow:hidden;
+	padding:4px;
+	cursor: move;
+	position: relative;
+}
+#comment-cn-hd .close {
+	position:absolute;
+	top:4px;
+	right:4px;
+	z-index:6;
+	height:15px;
+	width:15px;
+	margin:0px;
+	padding:0px;
+	line-height:1px;
+	font-size:1px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	visibility:inherit;
+	background-image:url(../../images/JackSlocum/cn-close.gif);
+}
+#comment-items .csel  {
+	position:absolute;
+	right:0;top:0;
+	height:16px;
+	width:16px;
+	margin:0px;
+	padding:0px;
+	line-height:1px;
+	font-size:1px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	display:block;
+	background-image:url(../../images/JackSlocum/cselect-block.gif);
+}
+#comment-view-list .csel  {
+	display:none;
+}
+#comment-cn .ft {
+	height:30px;overflow:hidden;
+}
+#comment-cn .yresizable-handle-east{
+	background-image:url(../../images/JackSlocum/sizer/e-handle-dark.gif);
+	border:0px;
+}
+#comment-cn .yresizable-handle-south{
+	background-image:url(../../images/JackSlocum/sizer/s-handle-dark.gif);
+	border:0px;
+}
+#comment-cn .yresizable-handle-west{
+	background-image:url(../../images/JackSlocum/sizer/e-handle-dark.gif);
+	border:0px;
+}
+#comment-cn .yresizable-handle-north{
+	background-image:url(../../images/JackSlocum/s.gif);
+	border:0px;
+}
+#comment-cn .yresizable-handle-southeast{
+	background-image:url(../../images/JackSlocum/sizer/se-handle-dark.gif);
+	border:0px;
+}
+.active-content {
+	border: 1px dashed #6593cf;
+	background-image:url(../../images/JackSlocum/active-bg.gif);
+}
+.comment-form-div{
+	margin:10px;
+}
+#cform-tab label {
+	margin:4px;
+	margin-left:0px;
+	display:block;
+}
+#cform-tab .textinput{
+	border:1px solid #6593cf;
+	width:100%;
+	padding:1px;
+	margin-bottom:2px;
+	font:normal 11px tahoma, arial;
+}
+#comment {
+	width:480px;
+	height:205px;
+	font:normal 11px tahoma, arial;
+}
+#comment-tabs{
+	margin:5px;
+	margin-top:3px;
+}
+#comment-cn .tabset{
+	border-bottom:1px solid #6593cf;
+}
+#comment-cn .tabset .hd li,#comment-cn .tabset .hd em,#comment-cn .tabset .hd strong {
+	font-size:9px !important;
+	font-family:tahoma,arial,helvetica;
+}
+#comment-cn .tabset .hd em{
+	padding-left:10px;padding-right:10px;
+}
+#comment-cn .tabset .hd li.on em{
+	color:#083772;
+}
+#comment-cn .tabset .hd li.on strong{
+	background-color:none;
+	background: url(../../images/JackSlocum/tabs/tab-right-bg.gif) no-repeat top right;
+}
+#comment-cn .tabset .hd li.on em{
+	background-color:none;
+	background: url(../../images/JackSlocum/tabs/tab-left-bg.gif) no-repeat;
+}
+#comment-cn .tabset .hd li a{
+	background-color:none;
+	background: url(../../images/JackSlocum/tabs/tab-inactive-right-bg.gif) no-repeat top right;
+}
+#comment-cn .tabset .hd li em{
+	background-color:none;
+	background: url(../../images/JackSlocum/tabs/tab-inactive-left-bg.gif) no-repeat;
+}
+#comment-cn .yui-ext-tabbody {
+	background-color:white;
+	border:1px solid #6593cf;
+	border-top:none; 
+	height:200px;
+	overflow:auto;
+}
+.posting-msg{
+	display:none;
+	font:normal 8pt tahoma, arial;
+	color:black;
+	margin-left:10px;
+}
+#post-error-msg{
+	color:red;
+}
+.active-msg{
+	display:block;
+}
+.commentmetadata {
+	margin: 0;
+	display: block;
+	font-size: 9px;
+	font-weight:normal;
+	color:gray;
+	margin-bottom:10px;
+	float:right;
+	clear:none;
+}
+#comment-items .commentmetadata{
+	position:relative;
+	padding-right:20px;
+}
+.cuser{
+	float:left;
+	clear:none;
+	font:bold 12px tahoma, arial;
+	padding-left:21px;
+	background: url(../../images/JackSlocum/comment.gif) no-repeat;
+}
+.cuser a{
+	font:bold 12px tahoma, arial;
+}
+.cheader{
+	margin-bottom:10px;
+	height:20px;
+}
+#comment-view-list li,#comment-items li {
+	display:block;
+	background: url(../../images/JackSlocum/comment-bg.gif) repeat-x;
+	background-position:0px -5px;
+	padding:10px;
+	padding-bottom:18px;
+	font-size:12px;
+}
+#comment-view-list li div.content,#comment-items li div.content{
+	padding-bottom:5px;
+}
+#cache {
+	clear: both;
+	text-align: center;
+}
