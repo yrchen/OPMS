@@ -16,6 +16,6 @@ define( '_OPMSEXEC', 1 );
 
 require_once('init.php');
 
-$page_title = 'Open Project Management System > 搜尋';
+$page->assign('page_title', set_title("搜尋"));
 $opms_tpl->display ('standard/search.tpl');
 ?>
