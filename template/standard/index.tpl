@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="utf-8">
 ﻿<head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="author" content="opms@Project.CIS.AU.edu.tw" />
-  <meta name="copyright" content="&copy;2006 CIS@AU.edu.tw" />
+  <meta name="author" content="yrchen@ATCity.org" />
+  <meta name="copyright" content="&copy;2009 OPMS@ATCity.org" />
   <meta name="robots" content="index,follow" />
   <meta name="description" content="Open Project Management System" />
   <meta name="keywords" content="Open Source, Project Management" />
