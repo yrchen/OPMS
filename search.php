@@ -19,5 +19,7 @@ require_once('init.php');
 $page = new Page();
 
 $page->assign('page_title', set_title("搜尋"));
+$timer->stop();
+$page->assign('total_time', sprintf("%2.3f", $timer->timeElapsed()));
 $page->display('standard/search.tpl');
 ?>
