@@ -16,6 +16,8 @@ define( '_OPMSEXEC', 1 );
 
 require_once('init.php');
 
+$page = new Page();
+
 $page->assign('page_title', set_title("搜尋"));
-$opms_tpl->display ('standard/search.tpl');
+$page->display('standard/search.tpl');
 ?>
